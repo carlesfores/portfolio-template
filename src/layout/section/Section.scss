@@ -1,0 +1,13 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 15px;
+
+  &__title {
+    background-color: var(--text);
+    color: var(--bg);
+    width: fit-content;
+    padding: 0 12px;
+  }
+}
