@@ -1,14 +1,12 @@
-interface Props {
+interface Props extends React.PropsWithChildren {
+  title: string;
   type: string;
   handleClick: () => void;
 }
 
 import "./Button.scss";
 
-import accessibilityIcon from "@/assets/icons/accessibility.svg";
-
-function Button({ type, handleClick }: Props) {
-  
+function Button({ children, title, type, handleClick }: Props) {
   const buttonClass = () => {
     const classNames = ["btn"];
 
@@ -23,11 +21,11 @@ function Button({ type, handleClick }: Props) {
     <button
       className={buttonClass()}
       type="button"
-      aria-label="Accessibility"
-      title="Accessibility"
+      aria-label={title}
+      title={title}
       onClick={() => handleClick()}
     >
-      <img src={accessibilityIcon} alt="" aria-hidden="true" />
+      {children}
     </button>
   );
 }
