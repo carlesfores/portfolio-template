@@ -1,5 +1,6 @@
 import JobsList from "./features/jobs/JobsList";
 import SkillsGrid from "./features/skills/SkillsGrid";
+
 import "./App.scss";
 
 import { JOBS, SKILLS } from "./data/jobs";
@@ -37,7 +38,6 @@ function App() {
             <SkillsGrid skills={SKILLS} />
           </div>
         </section>
-
       </main>
     </div>
   );

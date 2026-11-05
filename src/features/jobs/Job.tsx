@@ -1,4 +1,5 @@
 import { type Job as JobType} from "../../data/jobs";
+
 import "./Job.scss";
 
 function Job({ title, company, dates, tasks }: JobType) {

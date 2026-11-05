@@ -1,4 +1,5 @@
 import { type Skill as SkillType } from "../../data/jobs";
+
 import "./Skill.scss";
 
 function Skill({ name, icon, alt }: SkillType) {
