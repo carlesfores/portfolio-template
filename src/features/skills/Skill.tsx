@@ -1,4 +1,4 @@
-import { type Skill as SkillType } from "../../data/jobs";
+import { type Skill as SkillType } from "../../data";
 
 import "./Skill.scss";
 

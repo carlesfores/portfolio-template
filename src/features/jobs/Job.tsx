@@ -1,4 +1,4 @@
-import { type Job as JobType} from "../../data/jobs";
+import { type Job as JobType} from "../../data";
 
 import "./Job.scss";
 

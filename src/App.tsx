@@ -3,7 +3,7 @@ import SkillsGrid from "./features/skills/SkillsGrid";
 
 import "./App.scss";
 
-import { JOBS, SKILLS } from "./data/jobs";
+import { JOBS, SKILLS } from "./data";
 
 function App() {
   return (

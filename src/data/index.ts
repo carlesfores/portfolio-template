@@ -1,3 +1,5 @@
+import { type Job, type Skill } from "../interfaces";
+
 import html5Icon from "../assets/html5-light.svg";
 import css3Icon from "../assets/css3-light.svg";
 import jsIcon from "../assets/js-light.svg";
@@ -6,20 +8,6 @@ import reactIcon from "../assets/react-light.svg";
 import typescriptIcon from "../assets/typescript-light.svg";
 import sassIcon from "../assets/sass-light.svg";
 import viteIcon from "../assets/vitejs-light.svg";
-
-export interface Job {
-  title: string;
-  company: string;
-  dates: string;
-  tasks: string[];
-}
-
-export interface Skill {
-  name: string;
-  icon: string;
-  alt?: string;
-  level?: number;
-}
 
 export const JOBS: Job[] = [
   {
