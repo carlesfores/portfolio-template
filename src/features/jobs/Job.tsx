@@ -1,13 +1,12 @@
-import { type Job as JobType} from "../../interfaces";
+import { type Job as JobType } from "../../interfaces";
 
 import "./Job.scss";
 
 function Job({ title, company, dates, tasks }: JobType) {
   return (
     <div className="job">
-      <div className="job__title">
-        {company} - {title}
-      </div>
+      <div className="job__company">{company}</div>
+      <div className="job__title">{title}</div>
       <div className="job__dates">{dates}</div>
       <div className="job__description">
         {tasks.map((task: string, index: number) => (

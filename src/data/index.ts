@@ -1,13 +1,17 @@
 import { type Job, type Skill } from "../interfaces";
 
-import html5Icon from "../assets/html5-light.svg";
-import css3Icon from "../assets/css3-light.svg";
-import jsIcon from "../assets/js-light.svg";
-import vuejsIcon from "../assets/vuejs-light.svg";
-import reactIcon from "../assets/react-light.svg";
-import typescriptIcon from "../assets/typescript-light.svg";
-import sassIcon from "../assets/sass-light.svg";
-import viteIcon from "../assets/vitejs-light.svg";
+import html5Icon from "../assets/html5.svg";
+import css3Icon from "../assets/css3.svg";
+import jsIcon from "../assets/js.svg";
+import vuejsIcon from "../assets/vuejs.svg";
+import reactIcon from "../assets/react.svg";
+import typescriptIcon from "../assets/typescript.svg";
+import sassIcon from "../assets/sass.svg";
+import viteIcon from "../assets/vitejs.svg";
+import tailwindIcon from "../assets/tailwindcss.svg";
+import storybookIcon from "../assets/storybook.svg";
+import nextjsIcon from "../assets/nextjs.svg";
+import webpackIcon from "../assets/webpack.svg";
 
 export const JOBS: Job[] = [
   {
@@ -68,12 +72,18 @@ export const JOBS: Job[] = [
 ]
 
 export const SKILLS: Skill[] = [
-  { name: "HTML5", icon: html5Icon, alt: "HTML5" },
-  { name: "CSS3", icon: css3Icon, alt: "CSS3" },
   { name: "JavaScript", icon: jsIcon, alt: "JavaScript" },
   { name: "TypeScript", icon: typescriptIcon, alt: "TypeScript" },
+  { name: "HTML5", icon: html5Icon, alt: "HTML5" },
+  { name: "CSS3", icon: css3Icon, alt: "CSS3" },
   { name: "Vue.js", icon: vuejsIcon, alt: "Vue.js" },
   { name: "React", icon: reactIcon, alt: "React" },
+  { name: "Next.js", icon: nextjsIcon, alt: "Next.js" },
   { name: "Sass", icon: sassIcon, alt: "Sass" },
+  { name: "Tailwind CSS", icon: tailwindIcon, alt: "Tailwind CSS" },
+  { name: "Storybook", icon: storybookIcon, alt: "Storybook" },
   { name: "Vite", icon: viteIcon, alt: "Vite" },
+  { name: "Webpack", icon: webpackIcon, alt: "Webpack" },
+
+
 ];
