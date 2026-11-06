@@ -1,4 +1,4 @@
-import { type Job as JobType } from "../../data/index.ts";
+import { type Job as JobType } from "../../interfaces";
 import Job from "./Job.tsx";
 
 import "./JobsList.scss";

@@ -1,4 +1,4 @@
-import { type Skill as SkillType } from "../../data/index.ts";
+import { type Skill as SkillType } from "../../interfaces";
 import Skill from "./Skill.tsx";
 
 import "./SkillsGrid.scss";
