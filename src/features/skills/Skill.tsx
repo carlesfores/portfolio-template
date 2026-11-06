@@ -8,7 +8,7 @@ function Skill({ name, icon, alt }: SkillType) {
       <div className="skill__icon">
         <img src={icon} alt={alt || name} />
       </div>
-      <div className="skill__name">{name}</div>
+      <div className="skill__name"><code>{name}</code></div>
     </div>
   );
 }

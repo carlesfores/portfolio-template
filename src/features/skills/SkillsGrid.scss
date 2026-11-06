@@ -1,5 +1,7 @@
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(6, 100px);
+  grid-gap: 1rem;
+  grid-auto-flow: dense;
 }

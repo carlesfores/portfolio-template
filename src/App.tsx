@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <header className="app-header">
-        <div className="app-header__content">sticky header</div>
+        <div className="app-header__content"><code>{`<CarlesFores />`}</code></div>
       </header>
 
       <div className="hero">
