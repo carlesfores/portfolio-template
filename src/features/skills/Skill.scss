@@ -4,8 +4,11 @@
   flex-direction: column;
   gap: 8px;
   padding: 1rem 1.2rem;
-  background: var(--blue);
+  background: var(--accent);
   border-radius: 8px;
+  transition:
+    color var(--theme-transition-duration) ease,
+    background-color var(--theme-transition-duration) ease;
 
   &__icon {
     width: 42px;

@@ -1,15 +1,30 @@
+import { useState } from "react";
 import JobsList from "./features/jobs/JobsList";
 import SkillsGrid from "./features/skills/SkillsGrid";
+import sunIcon from "./assets/sun.svg";
+import moonIcon from "./assets/moon.svg";
 
 import "./App.scss";
 
 import { JOBS, SKILLS } from "./data";
 
 function App() {
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+
   return (
-    <div>
+    <div className="app" data-theme={isDarkTheme ? "dark" : "light"}>
       <header className="app-header">
-        <div className="app-header__content"><code>{`<CarlesFores />`}</code></div>
+        <div className="app-header__content">
+          <code>{`<CarlesFores />`}</code>
+          <div className="app-header__switch-theme">
+            <img
+              src={isDarkTheme ? moonIcon : sunIcon}
+              alt={isDarkTheme ? "Tema oscuro" : "Tema claro"}
+              role="switch"
+              onClick={() => setIsDarkTheme(!isDarkTheme)}
+            />
+          </div>
+        </div>
       </header>
 
       <div className="hero">
