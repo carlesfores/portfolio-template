@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Logo from "./components/Logo";
 import JobsList from "./features/jobs/JobsList";
 import SkillsGrid from "./features/skills/SkillsGrid";
 import sunIcon from "./assets/sun.svg";
@@ -15,25 +16,37 @@ function App() {
     <div className="app" data-theme={isDarkTheme ? "dark" : "light"}>
       <header className="app-header">
         <div className="app-header__content">
-          <code>{`<CarlesFores />`}</code>
-          <div className="app-header__switch-theme">
+          <Logo />
+          <button
+            className="app-header__switch-theme"
+            type="button"
+            role="switch"
+            aria-checked={isDarkTheme}
+            aria-label="Cambiar tema"
+            onClick={() => setIsDarkTheme(!isDarkTheme)}
+          >
             <img
-              src={isDarkTheme ? moonIcon : sunIcon}
-              alt={isDarkTheme ? "Tema oscuro" : "Tema claro"}
-              role="switch"
-              onClick={() => setIsDarkTheme(!isDarkTheme)}
+              className={isDarkTheme ? "" : "is-active"}
+              src={sunIcon}
+              alt=""
+              aria-hidden="true"
             />
-          </div>
+            <img
+              className={isDarkTheme ? "is-active" : ""}
+              src={moonIcon}
+              alt=""
+              aria-hidden="true"
+            />
+          </button>
         </div>
       </header>
 
       <div className="hero">
         <div className="blocker"></div>
         <div className="hero__content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
-          risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec,
-          ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula
-          massa, varius a, semper congue, euismod non, mi.
+          <div className="hero__title">Carles Fores Soto</div>
+          <div className="hero__subtitle">Front-end Engineer</div>
+          <div className="hero__draw"></div>
         </div>
       </div>
 
