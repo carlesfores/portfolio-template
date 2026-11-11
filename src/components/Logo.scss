@@ -1,0 +1,9 @@
+.logo {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.logo > span {
+  font-family: var(--mono);
+}
