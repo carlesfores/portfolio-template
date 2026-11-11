@@ -1,3 +1,10 @@
+.content {
+  width: var(--max-width);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
 .app {
   min-height: 100svh;
   color: var(--text);
@@ -17,10 +24,7 @@
   width: 100%;
 
   &__content {
-    width: var(--max-width);
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 32px;
+    @extend .content;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,37 +66,26 @@
   }
 }
 
-.hero {
+.main-header {
+  height: 100vh;
   background: var(--accent);
   transition:
     color var(--theme-transition-duration) ease,
     background-color var(--theme-transition-duration) ease;
 
   &__content {
-    width: var(--max-width);
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 64px 32px;
+    @extend .content;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: calc(100vh - var(--header-height));
   }
 
   &__title {
     font-size: 2rem;
     font-weight: 600;
   }
-
-  &__subtitle {
-  }
-}
-
-.main-content {
-  width: var(--max-width);
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 32px;
 }
 
 .blocker {
@@ -101,7 +94,7 @@
   height: var(--header-height);
 }
 
-.hero .blocker {
+.main-content header .blocker {
   background: var(--accent);
   transition: background-color var(--theme-transition-duration) ease;
 }
@@ -112,17 +105,22 @@
 }
 
 .section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 64px;
+
+  &__content {
+    @extend .content;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
 
   &__title {
     font-size: 2rem;
     font-weight: 600;
-    margin-bottom: 1rem;
-  }
-
-  &__content {
-    font-size: 1rem;
-    font-weight: 400;
     margin-bottom: 1rem;
   }
 }

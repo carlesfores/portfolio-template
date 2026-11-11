@@ -41,28 +41,30 @@ function App() {
         </div>
       </header>
 
-      <div className="hero">
-        <div className="blocker"></div>
-        <div className="hero__content">
-          <div className="hero__title">Carles Fores Soto</div>
-          <div className="hero__subtitle">Front-end Engineer</div>
-          <div className="hero__draw"></div>
-        </div>
-      </div>
-
       <main className="main-content">
+        <header className="main-header">
+          {/* CSS magic spell */}
+          <div className="blocker"></div>
+          <div className="main-header__content">
+            <div className="main-header__title">Carles Fores Soto</div>
+            <div className="main-header__subtitle">Front-end Engineer</div>
+            <div className="main-header__draw"></div>
+          </div>
+        </header>
+
+        {/* CSS magic spell */}
         <div className="blocker"></div>
 
         <section className="section">
-          <div className="section__title">Experiencia</div>
           <div className="section__content">
+            <div className="section__title">Experiencia</div>
             <JobsList jobs={JOBS} />
           </div>
         </section>
 
         <section className="section">
-          <div className="section__title">Habilidades</div>
           <div className="section__content">
+            <div className="section__title">Habilidades</div>
             <SkillsGrid skills={SKILLS} />
           </div>
         </section>
