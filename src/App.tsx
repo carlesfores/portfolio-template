@@ -23,20 +23,10 @@ function App() {
             role="switch"
             aria-checked={isDarkTheme}
             aria-label="Cambiar tema"
-            onClick={() => setIsDarkTheme(!isDarkTheme)}
+            onClick={() => setIsDarkTheme((currentTheme) => !currentTheme)}
           >
-            <img
-              className={isDarkTheme ? "" : "is-active"}
-              src={sunIcon}
-              alt=""
-              aria-hidden="true"
-            />
-            <img
-              className={isDarkTheme ? "is-active" : ""}
-              src={moonIcon}
-              alt=""
-              aria-hidden="true"
-            />
+            <img className="sun" src={sunIcon} alt="" aria-hidden="true" />
+            <img className="moon" src={moonIcon} alt="" aria-hidden="true" />
           </button>
         </div>
       </header>
@@ -65,6 +55,13 @@ function App() {
         <section className="section">
           <div className="section__content">
             <div className="section__title">Habilidades</div>
+            <SkillsGrid skills={SKILLS} />
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="section__content">
+            <div className="section__title">Contacto</div>
             <SkillsGrid skills={SKILLS} />
           </div>
         </section>

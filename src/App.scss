@@ -32,31 +32,72 @@
 
   &__switch-theme {
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 44px;
     padding: 0;
     border: 0;
-    border-radius: 50%;
+    border-radius: 999px;
     background: transparent;
     cursor: pointer;
 
     img {
       position: absolute;
-      inset: 8px;
-      width: 24px;
-      height: 24px;
+      top: 50%;
+      z-index: 2;
+      width: 12px;
+      height: 12px;
       filter: var(--filter);
       opacity: 0;
-      transform: rotate(-90deg) scale(0.5);
+      transform: translateY(-50%);
       transition:
         opacity var(--theme-transition-duration) ease,
-        transform var(--theme-transition-duration) ease,
         filter var(--theme-transition-duration) ease;
 
-      &.is-active {
-        opacity: 1;
-        transform: rotate(0) scale(1);
+      &.sun {
+        left: 7px;
       }
+
+      &.moon {
+        right: 7px;
+      }
+    }
+
+    &:not([aria-checked="true"]) img.sun,
+    &[aria-checked="true"] img.moon {
+      opacity: 1;
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 3px;
+      z-index: 1;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--bg);
+      box-shadow: 0 1px 4px rgb(0 0 0 / 20%);
+      content: "";
+      transform: translateY(-50%);
+      transition:
+        background-color var(--theme-transition-duration) ease,
+        transform var(--theme-transition-duration) ease;
+    }
+
+    &::after {
+      position: absolute;
+      inset: 50% 0 auto;
+      height: 28px;
+      border: 1px solid color-mix(in srgb, var(--text) 45%, var(--bg));
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--text) 20%, var(--bg));
+      content: "";
+      transform: translateY(-50%);
+      transition: background-color var(--theme-transition-duration) ease;
+    }
+
+    &[aria-checked="true"]::before {
+      transform: translate(22px, -50%);
     }
 
     &:focus-visible {
@@ -67,7 +108,7 @@
 }
 
 .main-header {
-  height: 100vh;
+  height: 50vh;
   background: var(--accent);
   transition:
     color var(--theme-transition-duration) ease,
@@ -79,7 +120,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - var(--header-height));
+    height: calc(50vh - var(--header-height));
   }
 
   &__title {

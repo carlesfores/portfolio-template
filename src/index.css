@@ -14,8 +14,8 @@
   --sans: system-ui, "Segoe UI", Roboto, sans-serif;
   --heading: system-ui, "Segoe UI", Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
-  --max-width: 68.75rem;
-  --header-height: 4rem;
+  --max-width: 68.75em;
+  --header-height: 4em;
   --theme-transition-duration: 0.3s;
   --font-size: 16px;
 
